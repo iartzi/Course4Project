@@ -7,7 +7,7 @@ data <- data %>% mutate(V1 = as.POSIXct(dmy_hms(as.character(paste(V1, V2)))), V
 V4 = as.numeric(as.character(V4)),V5 = as.numeric(as.character(V5)), V7 = as.numeric(as.character(V7)),
 V8 = as.numeric(as.character(V8)),V9 = as.numeric(as.character(V9)))
 
-# create plot4 and save to file
+# create plot4 and save to file 
 par(mfrow = c(2, 2))
 
 #png(filename="plot4.png")

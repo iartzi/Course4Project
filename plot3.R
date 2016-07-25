@@ -5,8 +5,8 @@ data <- read.table("household_power_consumption.txt", sep = ";", skip = 66637, n
 # clean data
 data <- data %>% mutate(V1 = as.POSIXct(dmy_hms(as.character(paste(V1, V2)))),V7 = as.numeric(as.character(V7)),V8 = as.numeric(as.character(V8)),V9 = as.numeric(as.character(V9))) %>% select(V1,V7:V9)
 
-# create plot3 and save to file
-png(filename="plot3.png")
+# create plot3 and save to file 
+png(filename="plot3.png",width=480, height=480)
 with(data, plot(V1,V7, type="n", xlab = "", ylab = "Energy Sub Metering"))
 with(data, points(V1,V7, col="black", type="l"))
 with(data, points(V1,V8, col="red", type="l"))
