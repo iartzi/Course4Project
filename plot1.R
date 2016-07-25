@@ -1,4 +1,4 @@
-# PLOT 1
+# PLOT 1 
 # reading relevant data
 data <- read.table("household_power_consumption.txt", sep = ";", skip = 66637, nrows = 2880)
 
